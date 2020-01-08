@@ -4,9 +4,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-import org.dareon.domain.CFP;
 import org.dareon.domain.Proposal;
-import org.dareon.domain.Repo;
 /**
  * 
  *defines Proposal repository extending CrudRepository defining create retrieve update and delete functionality

@@ -13,31 +13,30 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CustomMethodSecurityExpressionHandler extends DefaultMethodSecurityExpressionHandler
-{
-    @Autowired
-    private RepoService repoService;
-    
-    @Autowired
-    private CFPService cFPService;
-    
-    @Autowired
-    private ProposalService proposalService;
-    
-    private final AuthenticationTrustResolver trustResolver = new AuthenticationTrustResolverImpl();
+public class CustomMethodSecurityExpressionHandler extends DefaultMethodSecurityExpressionHandler {
+	@Autowired
+	private RepoService repoService;
 
-    @Override
-    protected MethodSecurityExpressionOperations createSecurityExpressionRoot(Authentication authentication,
-	    MethodInvocation invocation)
-    {
-	if(repoService == null)
-	    System.out.println("ERROR");
-	// final CustomMethodSecurityExpressionRoot root = new
-	// CustomMethodSecurityExpressionRoot(authentication);
-	final CustomSecurityExpressionRoot root = new CustomSecurityExpressionRoot(authentication,repoService,cFPService, proposalService);
-	root.setPermissionEvaluator(getPermissionEvaluator());
-	root.setTrustResolver(this.trustResolver);
-	root.setRoleHierarchy(getRoleHierarchy());
-	return root;
-    }
+	@Autowired
+	private CFPService cFPService;
+
+	@Autowired
+	private ProposalService proposalService;
+
+	private final AuthenticationTrustResolver trustResolver = new AuthenticationTrustResolverImpl();
+
+	@Override
+	protected MethodSecurityExpressionOperations createSecurityExpressionRoot(Authentication authentication,
+			MethodInvocation invocation) {
+		if (repoService == null)
+			System.out.println("ERROR");
+		// final CustomMethodSecurityExpressionRoot root = new
+		// CustomMethodSecurityExpressionRoot(authentication);
+		final CustomSecurityExpressionRoot root = new CustomSecurityExpressionRoot(authentication, repoService,
+				cFPService, proposalService);
+		root.setPermissionEvaluator(getPermissionEvaluator());
+		root.setTrustResolver(this.trustResolver);
+		root.setRoleHierarchy(getRoleHierarchy());
+		return root;
+	}
 }

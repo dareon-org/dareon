@@ -1,14 +1,9 @@
 package org.dareon.repository;
 
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
-
 import java.util.List;
 import org.dareon.domain.Expertise;
 import org.dareon.domain.Classification;
-import org.dareon.domain.CFP;
-import org.dareon.domain.Repo;
 import org.dareon.domain.User;
 
 /**

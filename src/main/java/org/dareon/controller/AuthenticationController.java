@@ -2,7 +2,6 @@ package org.dareon.controller;
 
 import java.text.ParseException;
 import java.util.Arrays;
-import java.util.Date;
 import javax.validation.ValidationException;
 
 import org.apache.commons.lang3.RandomStringUtils;
@@ -33,7 +32,6 @@ import net.minidev.json.JSONObject;
 @Controller
 public class AuthenticationController {
 
-	private String aafUrl = "https://rapid.test.aaf.edu.au/jwt/authnrequest/research/zwlqa1P7GnhzuYdrByb-vg";
 	private String aafIssuer = "https://rapid.test.aaf.edu.au";
 	private String aafAudience = "https://www.dareon.org";
 	private String aafSecretKey = "Hy2unvH&!kc1OQ&|>%+k*5wGELN&lUd^";
@@ -68,8 +66,8 @@ public class AuthenticationController {
 			//Verify claims, throw exception if invalid
 			if (validateJWTClaims(claimsSet) == true) {
 
-				String edupersontargetedid = (String)(json.get("edupersontargetedid"));
-				String username = edupersontargetedid.split("!")[2];
+				//String edupersontargetedid = (String)(json.get("edupersontargetedid"));
+				//String username = edupersontargetedid.split("!")[2];
 				
 				// Get the other user's information
 				String firstname = (String)(json.get("givenname"));

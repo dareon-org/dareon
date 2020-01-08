@@ -1,41 +1,23 @@
 package org.dareon.controller;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-
-import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
-
 import org.dareon.domain.CFP;
-import org.dareon.domain.Repo;
-import org.dareon.domain.User;
 import org.dareon.service.CFPService;
 import org.dareon.service.RepoService;
-import org.dareon.service.UserDetailsImpl;
 import org.dareon.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.web.ServerProperties.Session;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
-import org.springframework.security.authentication.*;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * 
  *This class implements the main functionality of the different services provided by our system
@@ -97,7 +79,6 @@ public class CFPController
     @RequestMapping("/callforproposals/create/{id}")
     public String cFPCreateWithPreselectedRepo(Model model,@PathVariable Long id)
     {
-	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	model.addAttribute("repos", Arrays.asList(repoService.findById(id)));
 	model.addAttribute("callForProposals", new CFP());
 	return "callforproposals/create";
@@ -111,7 +92,6 @@ public class CFPController
     @RequestMapping(value = "/callforproposals/create", method = RequestMethod.POST)
     public String cFPSave(@ModelAttribute CFP cFP)
     {
-	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	// UserDetailsImpl u = (UserDetailsImpl)auth.getPrincipal();
 	// if (callForProposals.getUser() == null)
 	// callForProposals.setUser(repoService.findByTitle(title)));
@@ -131,7 +111,7 @@ public class CFPController
     @RequestMapping("/callforproposals/edit/{id}")
     public String cFPEdit(@PathVariable Long id, Model model)
     {
-	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	//Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	model.addAttribute("repos", Arrays.asList((cFPService.findById(id)).getRepo()));
 	model.addAttribute("callForProposals", cFPService.findById(id));
 	return "callforproposals/create";
@@ -146,7 +126,7 @@ public class CFPController
     @RequestMapping("/callforproposals/read/{id}")
     public String cFPRead(@PathVariable Long id, Model model)
     {
-	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	//Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	model.addAttribute("callForProposals", cFPService.findById(id));
 	return "callforproposals/read";
     }

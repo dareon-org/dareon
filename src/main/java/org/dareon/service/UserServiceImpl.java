@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import org.dareon.domain.Repo;
 import org.dareon.domain.User;
 import org.dareon.repository.UserRepository;
 

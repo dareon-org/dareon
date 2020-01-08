@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.dareon.domain.Classification;
-import org.dareon.domain.Repo;
 import org.dareon.repository.ClassificationRepository;
-import org.dareon.repository.RepoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

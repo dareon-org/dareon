@@ -1,62 +1,49 @@
 package org.dareon.domain;
 
-import java.util.Collection;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 
 @Entity
-public class JTI
-{
+public class JTI {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Id
-    private long id;
-    
-    private String jti;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Id
+	private long id;
 
-    
-    public JTI()
-    {
-	super();
-    }
+	private String jti;
 
-    public JTI(final String jti)
-    {
-	super();
-	this.jti = jti;
-    }
+	public JTI() {
+		super();
+	}
 
-    //
-    public long getId()
-    {
-        return id;
-    }
+	public JTI(final String jti) {
+		super();
+		this.jti = jti;
+	}
 
-    public void setId(long id)
-    {
-        this.id = id;
-    }
+	//
+	public long getId() {
+		return id;
+	}
 
-    public String getJti()
-    {
-        return jti;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public void setJti(String jti)
-    {
-        this.jti = jti;
-    }
-  
+	public String getJti() {
+		return jti;
+	}
 
-    @Override
-    public String toString()
-    {
-	final StringBuilder builder = new StringBuilder();
-	builder.append("Privilege [name=").append(jti).append("]").append("[id=").append(jti).append("]");
-	return builder.toString();
-    }
+	public void setJti(String jti) {
+		this.jti = jti;
+	}
+
+	@Override
+	public String toString() {
+		final StringBuilder builder = new StringBuilder();
+		builder.append("Privilege [name=").append(jti).append("]").append("[id=").append(jti).append("]");
+		return builder.toString();
+	}
 }

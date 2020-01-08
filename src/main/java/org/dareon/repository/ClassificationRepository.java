@@ -5,8 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 import org.dareon.domain.Classification;
-import org.dareon.domain.CFP;
-import org.dareon.domain.Repo;
 
 /**
  * 

@@ -3,9 +3,7 @@ package org.dareon.service;
 import java.util.List;
 
 import org.dareon.domain.CFP;
-import org.dareon.domain.Repo;
 import org.dareon.repository.CFPRepository;
-import org.dareon.repository.RepoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 /**

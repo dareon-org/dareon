@@ -1,204 +1,207 @@
 @charset 'UTF-8';
 
-
-@font-face{font-family:'Museo500';src:url('/fonts/Museo-500.otf') format('truetype');}
-
+@font-face {
+	font-family: 'Museo500';
+	src: url('/fonts/Museo-500.otf') format('truetype');
+}
 
 html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-}
-footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-  font-size: 12px;
-  text-align: center;
+	position: relative;
+	min-height: 100%;
 }
 
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+	padding-top: 50px;
+	/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #f5f5f5;
+	font-size: 12px;
+	text-align: center;
+}
 
 /* Login form */
-#login-dp{
-    min-width: 250px;
-    padding: 20px;
-    overflow:hidden;
-}
-#login-dp .form-group {
-    margin-bottom: 10px;
+#login-dp {
+	min-width: 250px;
+	padding: 20px;
+	overflow: hidden;
 }
 
+#login-dp .form-group {
+	margin-bottom: 10px;
+}
 
 /* Form: Input Labels */
 #label-create {
 	text-align: left;
 }
 
-
 /* Banner */
 .jumbotron {
-  background-color: #E60028;
-  font-family: "Museo500", Arial;
-  color: #fff;
-  padding: 20px;
-} 
-
+	background-color: #E60028;
+	font-family: "Museo500", Arial;
+	color: #fff;
+	padding: 20px;
+}
 
 /* Table with Round Borders */
 .table-round {
-   border-collapse: separate;
-   border: solid #ddd 1px;
-   border-radius: 6px;
-   border-left: 0px;
-   border-top: 0px;
-}
-.table-round > thead:first-child > tr:first-child > th {
-    border-bottom: 0px;
-    border-top: solid #ddd 1px;
-}
-.table-round td, .table-curved th {
-    border-left: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-}
-.table-round > :first-child > :first-child > :first-child {
-    border-top-left-radius: 6px;
-}
-.table-round > :first-child > :first-child > :last-child {
-    border-top-right-radius: 6px;
-}
-.table-round > :last-child > :last-child > :first-child {
-    border-bottom-left-radius: 6px;
-}
-.table-round > :last-child > :last-child > :last-child {
-    border-bottom-right-radius: 6px;
+	border-collapse: separate;
+	border: solid #ddd 1px;
+	border-radius: 6px;
+	border-left: 0px;
+	border-top: 0px;
 }
 
+.table-round>thead:first-child>tr:first-child>th {
+	border-bottom: 0px;
+	border-top: solid #ddd 1px;
+}
+
+.table-round td, .table-curved th {
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+}
+
+.table-round>:first-child>:first-child>:first-child {
+	border-top-left-radius: 6px;
+}
+
+.table-round>:first-child>:first-child>:last-child {
+	border-top-right-radius: 6px;
+}
+
+.table-round>:last-child>:last-child>:first-child {
+	border-bottom-left-radius: 6px;
+}
+
+.table-round>:last-child>:last-child>:last-child {
+	border-bottom-right-radius: 6px;
+}
 
 /* Badge colors */
 .badge {
-  font-weight: bold;
-}
-.badge-offline {
-  background-color: #E60028;
-  font-size: 10px;
-}
-.badge-online {
-  background-color: #468847;
-  font-size: 10px;
+	font-weight: bold;
 }
 
+.badge-offline {
+	background-color: #E60028;
+	font-size: 10px;
+}
+
+.badge-online {
+	background-color: #468847;
+	font-size: 10px;
+}
 
 /* Horizontal rule */
 hr {
-    height: 1px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+	height: 1px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
-hr.faded { 
-    margin-top: 20px;
-    margin-top: 20px;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
-	}
-
+hr.faded {
+	margin-top: 20px;
+	margin-top: 20px;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
 
 /* DataTable */
 table.dataTable {
-  width: 100%;
-  clear: both;
-  }
-  
-  table.dataTable thead td {
-    border-top: 0px ;
-    border-bottom: 0px ; 
-    margin: 0 !important;
-	padding: 0 !important;    
-    }
-    
-  table.dataTable tbody td {
-    border-top: 0px;
-    border-bottom: 0px;
-    margin: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    }
+	width: 100%;
+	clear: both;
+}
 
- .panel-body.no-margin {
+table.dataTable thead td {
+	border-top: 0px;
+	border-bottom: 0px;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+table.dataTable tbody td {
+	border-top: 0px;
+	border-bottom: 0px;
+	margin: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.panel-body.no-margin {
 	padding: 10px !important;
 	margin: 0 !important;
-	}
-
-
+}
 
 /* Headers */
-h1, h2, h3, h4 { 
-    font-family: "Museo500", Arial;
-}
-.page-header { 
-    color: #E60028;
+h1, h2, h3, h4 {
+	font-family: "Museo500", Arial;
 }
 
+.page-header {
+	color: #E60028;
+}
 
 /* Create Button */
 .btn-create {
 	color: #FFFFFF;
 	background-color: #000054;
 }
+
 .btn-create:hover {
-	color:#FFFFFF;
-	background-color:#0000ff;
+	color: #FFFFFF;
+	background-color: #0000ff;
 }
-
-
 
 /* Owner, Repository, CFP and Date */
 .label.label-owner {
 	background-color: #000000;
 	margin-right: 5px;
 }
+
 .label.label-date {
 	background-color: #FFFFFF;
 	color: #000000;
 }
 
-
 /* Login Menu */
 .dropdown-toggle.nav-login {
-	color:#9d9d9d;
+	color: #9d9d9d;
 	margin-top: 5px;
 }
 
 .dropdown-toggle.nav-login:hover {
-	color:#FFFFFF;
-	background-color:transparent;
+	color: #FFFFFF;
+	background-color: transparent;
 }
 
-.dropdown.open > .dropdown-toggle.nav-login {
-	color:#FFFFFF;
-	background-color:transparent;
+.dropdown.open>.dropdown-toggle.nav-login {
+	color: #FFFFFF;
+	background-color: transparent;
 }
-
 
 /* Repository, CFP & Proposal Title */
 a.link-title {
-	color:#000054;
-}
-a.link-title:hover {
-	color:#E60028;
+	color: #000054;
 }
 
+a.link-title:hover {
+	color: #E60028;
+}
 
 .modal-header.modal-delete {
-	padding: 20px 15px; 
-	background-color: #E60028; 
-	color: #FFFFFF !important; 
+	padding: 20px 15px;
+	background-color: #E60028;
+	color: #FFFFFF !important;
 }
