@@ -40,9 +40,9 @@ public class CFP {
 	@Column(nullable = false, unique = true)
 	private String title;
 
-	@CreationTimestamp
-	@Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	@Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", nullable = false, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
+	@CreationTimestamp
 	private Date createdOn;
 
 	@Column(nullable = false, columnDefinition = "TEXT")

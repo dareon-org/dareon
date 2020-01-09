@@ -8,17 +8,19 @@ import org.dareon.domain.User;
 
 /**
  * 
- *defines Expertise repository repository extending super class CrudRepository defining create retrieve update and delete functionality
+ * defines Expertise repository repository extending super class CrudRepository
+ * defining create retrieve update and delete functionality
  */
-public interface ExpertiseRepository extends CrudRepository<Expertise, Long>
-{
+public interface ExpertiseRepository extends CrudRepository<Expertise, Long> {
 
-    Expertise findById(Long id);
-    List<Expertise> findByUser(User user);
-    Expertise findByClassification(Classification classification);
-    List<Expertise> findAllByOrderById();
-    List<Expertise> findAllByUser(User user);
-    
-   
+	Expertise findById(Long id);
+
+	List<Expertise> findByUser(User user);
+
+	Expertise findByClassification(Classification classification);
+
+	List<Expertise> findAllByOrderById();
+
+	List<Expertise> findAllByUser(User user);
 
 }

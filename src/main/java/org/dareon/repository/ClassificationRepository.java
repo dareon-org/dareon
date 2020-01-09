@@ -8,14 +8,15 @@ import org.dareon.domain.Classification;
 
 /**
  * 
- *defines Classification repository extending super class CrudRepository defining create retrieve update and delete functionality
+ * defines Classification repository extending super class CrudRepository
+ * defining create retrieve update and delete functionality
  */
-public interface ClassificationRepository extends CrudRepository<Classification, Long>
-{
+public interface ClassificationRepository extends CrudRepository<Classification, Long> {
 
-    Classification findById(Long id);
-    Classification findByName(String name);
-    List<Classification> findAllByOrderById();
-   
+	Classification findById(Long id);
+
+	Classification findByName(String name);
+
+	List<Classification> findAllByOrderById();
 
 }

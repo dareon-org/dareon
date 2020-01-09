@@ -12,45 +12,38 @@ import org.dareon.domain.User;
 import org.dareon.repository.UserRepository;
 
 @Service
-public class UserServiceImpl implements UserService, UserDetailsService
-{
+public class UserServiceImpl implements UserService, UserDetailsService {
 
-    private UserRepository userRepository;
+	private UserRepository userRepository;
 
-    @Autowired
-    public UserServiceImpl(UserRepository userRepository)
-    {
-	this.userRepository = userRepository;
-    }
-
-    @Override
-    public User findByEmail(String email)
-    {
-	return userRepository.findByEmail(email);
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
-    {
-	User user = findByEmail(username);
-	if (user == null)
-	{
-	    throw new UsernameNotFoundException(username);
+	@Autowired
+	public UserServiceImpl(UserRepository userRepository) {
+		this.userRepository = userRepository;
 	}
 
-	return new UserDetailsImpl(user);
-    }
-    
-    @Override
-    public List<User> list()
-    {
-	return userRepository.findAllByOrderByIdAsc();
-    }
+	@Override
+	public User findByEmail(String email) {
+		return userRepository.findByEmail(email);
+	}
 
-    @Override
-    public User save(User user)
-    {
-	return userRepository.save(user);
-    }
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		User user = findByEmail(username);
+		if (user == null) {
+			throw new UsernameNotFoundException(username);
+		}
+
+		return new UserDetailsImpl(user);
+	}
+
+	@Override
+	public List<User> list() {
+		return userRepository.findAllByOrderByIdAsc();
+	}
+
+	@Override
+	public User save(User user) {
+		return userRepository.save(user);
+	}
 
 }

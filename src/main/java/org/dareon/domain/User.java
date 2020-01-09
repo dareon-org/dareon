@@ -52,9 +52,9 @@ public class User {
 	@Column(nullable = false)
 	private String institution;
 
-	@CreationTimestamp
-	@Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+	@Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", nullable = false, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
+	@CreationTimestamp
 	private Date createdOn;
 
 	// Setting relations of th edifferent users
