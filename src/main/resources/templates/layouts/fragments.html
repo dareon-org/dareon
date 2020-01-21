@@ -1,114 +1,144 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" >
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
-	<head th:fragment="head-all">
-	
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
-	  	<title>Data Reviews Online</title>
-		<link rel="stylesheet" href="external/bootstrap/css/bootstrap.min.css" 
-				th:href="@{/external/bootstrap/css/bootstrap.min.css}" />
+<!-- ======================= -->
+<!-- Fragment: head-all      -->
+<!-- ======================= -->
+<head th:fragment="head-all">
 
-		<link rel="stylesheet" href="external/bootstrap-select/css/bootstrap-select.css" 
-			th:href="@{/external/bootstrap-select/css/bootstrap-select.css}" />
-		<link rel="stylesheet" href="external/bootstrap-toggle/css/bootstrap-toggle.min.css" 
-				th:href="@{/external/bootstrap-toggle/css/bootstrap-toggle.min.css}" />
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="external/datatables.net-bs/css/dataTables.bootstrap.min.css" 
-				th:href="@{/external/datatables.net-bs/css/dataTables.bootstrap.min.css}" />				
-				
-		<link rel="stylesheet" href="external/bootstrap-treeview/css/bootstrap-treeview.css" 
-				th:href="@{/external/bootstrap-treeview/css/bootstrap-treeview.css}" />
-		<link rel="stylesheet" href="css/custom.css" th:href="@{/css/custom.css}" />
-		
-		<link rel="icon" type="image/x-icon" href="images/favicon.ico" th:href="@{/images/favicon.ico}"/>
-	
-		<script src="external/jquery/jquery-3.2.1.min.js"
-				th:src="@{/external/jquery/jquery-3.2.1.min.js}" ></script>			
-		<script src="external/bootstrap-select/js/bootstrap-select.js"
-			th:src="@{/external/bootstrap-select/js/bootstrap-select.js}" ></script>
-		<script src="external/bootstrap-toggle/js/bootstrap-toggle.min.js"
-				th:src="@{/external/bootstrap-toggle/js/bootstrap-toggle.min.js}" ></script>
-		<script src="external/datatables.net-bs/js/jquery.dataTables.min.js" 
-				th:src="@{/external/datatables.net-bs/js/jquery.dataTables.min.js}" ></script>
-		<script src="external/datatables.net-bs/js/dataTables.bootstrap.min.js" 
-				th:src="@{/external/datatables.net-bs/js/dataTables.bootstrap.min.js}" ></script>				
-				
-	</head>  
+<title>Data Reviews Online</title>
 
-	<head th:fragment="head-min">
-	
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
- 	  	<title>Data Reviews Online</title>
-	  	<link rel="stylesheet" href="external/bootstrap/css/bootstrap.min.css" 
-				th:href="@{/external/bootstrap/css/bootstrap.min.css}" />
-		<link rel="stylesheet" href="css/custom.css" th:href="@{/css/custom.css}" />
+<link rel="stylesheet" href="external/bootstrap/css/bootstrap.min.css"
+	th:href="@{/external/bootstrap/css/bootstrap.min.css}" />
 
-		<link rel="icon" type="image/x-icon" href="images/favicon.ico" th:href="@{/images/favicon.ico}"/>
-		
-		<script src="external/jquery/jquery-3.2.1.min.js"
-				th:src="@{/external/jquery/jquery-3.2.1.min.js}" ></script>	
-	</head>
-  
-  
-  <body>
-  
- 	<header th:fragment="banner">
+<link rel="stylesheet"
+	href="external/bootstrap-select/css/bootstrap-select.css"
+	th:href="@{/external/bootstrap-select/css/bootstrap-select.css}" />
+	
+<link rel="stylesheet"
+	href="external/bootstrap-toggle/css/bootstrap-toggle.min.css"
+	th:href="@{/external/bootstrap-toggle/css/bootstrap-toggle.min.css}" />
+
+<link rel="stylesheet"
+	href="external/datatables.net-bs/css/dataTables.bootstrap.min.css"
+	th:href="@{/external/datatables.net-bs/css/dataTables.bootstrap.min.css}" />
+
+<link rel="stylesheet"
+	href="external/bootstrap-treeview/css/bootstrap-treeview.css"
+	th:href="@{/external/bootstrap-treeview/css/bootstrap-treeview.css}" />
+	
+<link rel="stylesheet" href="css/custom.css"
+	th:href="@{/css/custom.css}" />
+
+<link rel="icon" type="image/x-icon" href="images/favicon.ico"
+	th:href="@{/images/favicon.ico}" />
+
+<script src="external/jquery/jquery-3.2.1.min.js"
+	th:src="@{/external/jquery/jquery-3.2.1.min.js}"></script>
+<script src="external/bootstrap-select/js/bootstrap-select.js"
+	th:src="@{/external/bootstrap-select/js/bootstrap-select.js}"></script>
+<script src="external/bootstrap-toggle/js/bootstrap-toggle.min.js"
+	th:src="@{/external/bootstrap-toggle/js/bootstrap-toggle.min.js}"></script>
+<script src="external/datatables.net-bs/js/jquery.dataTables.min.js"
+	th:src="@{/external/datatables.net-bs/js/jquery.dataTables.min.js}"></script>
+<script src="external/datatables.net-bs/js/dataTables.bootstrap.min.js"
+	th:src="@{/external/datatables.net-bs/js/dataTables.bootstrap.min.js}"></script>
+
+</head>
+
+<!-- ======================= -->
+<!-- Fragment: head-min      -->
+<!-- ======================= -->
+<head th:fragment="head-min">
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Data Reviews Online</title>
+<link rel="stylesheet" href="external/bootstrap/css/bootstrap.min.css"
+	th:href="@{/external/bootstrap/css/bootstrap.min.css}" />
+<link rel="stylesheet" href="css/custom.css"
+	th:href="@{/css/custom.css}" />
+
+<link rel="icon" type="image/x-icon" href="images/favicon.ico"
+	th:href="@{/images/favicon.ico}" />
+
+<script src="external/jquery/jquery-3.2.1.min.js"
+	th:src="@{/external/jquery/jquery-3.2.1.min.js}"></script>
+</head>
+
+
+<body>
+
+	<!-- ======================= -->
+	<!-- Fragment: banner        -->
+	<!-- ======================= -->
+	<header th:fragment="banner">
 		<div class="jumbotron jumbotron-fluid text-center">
-			<h1>Data Reviews Online</h1> 
+			<h1>Data Reviews Online</h1>
 		</div>
-    </header> 
-  
-  	<div th:fragment="bodybottom-scripts-all">
+	</header>
+
+	<!-- ======================= -->
+	<!-- Fragment: bodybottom-scripts-all -->
+	<!-- ======================= -->
+	<div th:fragment="bodybottom-scripts-all">
 		<script src="external/bootstrap/js/bootstrap.min.js"
-				th:src="@{/external/bootstrap/js/bootstrap.min.js}" ></script>			
+			th:src="@{/external/bootstrap/js/bootstrap.min.js}"></script>
 		<script src="external/bootstrap-select/js/bootstrap-select.min.js"
-			th:src="@{/external/bootstrap-select/js/bootstrap-select.min.js}" ></script>
+			th:src="@{/external/bootstrap-select/js/bootstrap-select.min.js}"></script>
 		<script src="external/bootstrap-toggle/js/bootstrap-toggle.min.js"
-				th:src="@{/external/bootstrap-toggle/js/bootstrap-toggle.min.js}" ></script>
+			th:src="@{/external/bootstrap-toggle/js/bootstrap-toggle.min.js}"></script>
 		<script src="external/jquery/jquery-3.2.1.min.js"
-				th:src="@{/external/jquery/jquery-3.2.1.min.js}" ></script>	
-		<script src="external/datatables.net-bs/js/jquery.dataTables.min.js" 
-				th:src="@{/external/datatables.net-bs/js/jquery.dataTables.min.js}" ></script>
+			th:src="@{/external/jquery/jquery-3.2.1.min.js}"></script>
+		<script src="external/datatables.net-bs/js/jquery.dataTables.min.js"
+			th:src="@{/external/datatables.net-bs/js/jquery.dataTables.min.js}"></script>
 	</div>
 
-  	<div th:fragment="bodybottom-scripts-min">
+	<!-- ======================= -->
+	<!-- Fragment: bodybottom-scripts-min  -->
+	<!-- ======================= -->
+	<div th:fragment="bodybottom-scripts-min">
 		<script src="external/bootstrap/js/bootstrap.min.js"
-				th:src="@{/external/bootstrap/js/bootstrap.min.js}" ></script>	
+			th:src="@{/external/bootstrap/js/bootstrap.min.js}"></script>
 		<script src="external/bootstrap-treeview/js/bootstrap-treeview.js"
-				th:src="@{/external/bootstrap-treeview/js/bootstrap-treeview.js}" ></script>	
+			th:src="@{/external/bootstrap-treeview/js/bootstrap-treeview.js}"></script>
 	</div>
-	
 
+
+	<!-- ======================= -->
+	<!-- Fragment: footer        -->
+	<!-- ======================= -->
 	<footer th:fragment="footer">
 		<p class="copyright">
-			<div>
-				Copyright &copy; 2017 <strong>RMIT University</strong> | Disclaimer | Terms | Privacy | Feedback
-				<br />
-				This is a project of the eResearch Office, RMIT University
-			</div>
+		<div>
+			Copyright &copy; 2017 <strong>RMIT University</strong> | Disclaimer |
+			Terms | Privacy | Feedback <br /> This is a project of the eResearch
+			Office, RMIT University
+		</div>
 		</p>
-		
+
 		<script>
+			$(document).ready(
+					function() {
+						// get current URL path and assign 'active' class
+						var pathname = window.location.pathname;
+						$('.nav > li > a[href="' + pathname + '"]').parent()
+								.addClass('active');
+					});
+
 			$(document).ready(function() {
-				// get current URL path and assign 'active' class
-				var pathname = window.location.pathname;
-				$('.nav > li > a[href="'+pathname+'"]').parent().addClass('active');
+				$('[data-toggle="tooltip"]').tooltip();
 			});
-			
-			$(document).ready(function(){
-			    $('[data-toggle="tooltip"]').tooltip(); 
-			});
-			
 		</script>
-		
+
 	</footer>
-	
-  </body>
+
+</body>
 </html>

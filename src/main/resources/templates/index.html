@@ -1,89 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head th:replace="layouts/fragments :: head"></head>
+<head th:replace="layouts/fragments :: head"></head>
 
 <body>
 
 	<div th:replace="layouts/navigation:: nav-private"></div>
-		
+
 	<div layout:fragment="content">
-		
-	    <!-- Page Content -->
-    <div class="container">
 
-        <!-- Main Section -->
-  
-            <div class="col-lg-12">
-                <h2 class="page-header">
-					Dashboard
-                </h2>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Your Repositories</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Repository 1 </p>
-                        <p>Repository 2 </p>
-                        <p>Repository 3 </p>
-                        <p>Repository 4 </p>
-                        <div th:if="${#authorization.expression('hasAuthority(''REPO_CREATE_PRIVILEGE'')')} 
-							OR ${#authorization.expression('hasAuthority(''ROLE_SA'')')}" > 
-						<hr />
-                        <a href="/repo/create" class="btn btn-create btn-sm" role="button"><span class="glyphicon glyphicon-pencil" />
-                        Create</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Your Call for Proposals</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Call for Proposal 1 </p>
-                        <p>Call for Proposal 2 </p>
-                        <p>Call for Proposal 3 </p>
-                        <p>Call for Proposal 4 </p>
-						<div th:if="${#authorization.expression('hasAuthority(''CFP_CREATE_PRIVILEGE'')')} 
+		<!-- Page Content -->
+		<div class="container">
+
+			<!-- Main Section -->
+
+			<div class="col-lg-12">
+				<h2 class="page-header">Dashboard</h2>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>
+							<i class="fa fa-fw fa-check"></i> Your Repositories
+						</h4>
+					</div>
+					<div class="panel-body">
+						<p>Repository 1</p>
+						<p>Repository 2</p>
+						<p>Repository 3</p>
+						<p>Repository 4</p>
+						<div
+							th:if="${#authorization.expression('hasAuthority(''REPO_CREATE_PRIVILEGE'')')} 
 							OR ${#authorization.expression('hasAuthority(''ROLE_SA'')')}">
-	 						<hr />
-	                        <a href="/callforproposals/create" class="btn btn-create btn-sm" role="button"><span class="glyphicon glyphicon-pencil" />
-	                        Create</a>
+							<hr />
+							<a href="/repo/create" class="btn btn-create btn-sm"
+								role="button">
+								<span class="glyphicon glyphicon-pencil" />
+								Create
+							</a>
 						</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Your Proposals</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Proposal 1 </p>
-                        <p>Proposal 2 </p>
-                        <p>Proposal 3 </p>
-                        <p>Proposal 4 </p>
-                        <div th:if="${#authorization.expression('hasAuthority(''PROPOSAL_CREATE_PRIVILEGE'')')}
-							OR ${#authorization.expression('hasAuthority(''ROLE_SA'')')}" >
-	                        <hr />
-	                        <a href="/proposal/create" class="btn btn-create btn-sm" role="button"><span class="glyphicon glyphicon-pencil" />
-	                        Create</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-  
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>
+							<i class="fa fa-fw fa-gift"></i> Your Call for Proposals
+						</h4>
+					</div>
+					<div class="panel-body">
+						<p>Call for Proposal 1</p>
+						<p>Call for Proposal 2</p>
+						<p>Call for Proposal 3</p>
+						<p>Call for Proposal 4</p>
+						<div
+							th:if="${#authorization.expression('hasAuthority(''CFP_CREATE_PRIVILEGE'')')} 
+							OR ${#authorization.expression('hasAuthority(''ROLE_SA'')')}">
+							<hr />
+							<a href="/callforproposals/create" class="btn btn-create btn-sm"
+								role="button">
+								<span class="glyphicon glyphicon-pencil" />
+								Create
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>
+							<i class="fa fa-fw fa-compass"></i> Your Proposals
+						</h4>
+					</div>
+					<div class="panel-body">
+						<p>Proposal 1</p>
+						<p>Proposal 2</p>
+						<p>Proposal 3</p>
+						<p>Proposal 4</p>
+						<div
+							th:if="${#authorization.expression('hasAuthority(''PROPOSAL_CREATE_PRIVILEGE'')')}
+							OR ${#authorization.expression('hasAuthority(''ROLE_SA'')')}">
+							<hr />
+							<a href="/proposal/create" class="btn btn-create btn-sm"
+								role="button">
+								<span class="glyphicon glyphicon-pencil" />
+								Create
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-     </div>
-    <!-- /.container -->	
- 	</div>
- 	
+
+		</div>
+		<!-- /.container -->
+	</div>
+
 	<div th:replace="layouts/fragments :: bodybottom-scripts-min"></div>
-	<head th:replace="layouts/fragments :: footer"></head>
-		
+<head th:replace="layouts/fragments :: footer"></head>
+
 </body>
 </html>
