@@ -245,9 +245,9 @@ li.active {
 /* Banner */
 .jumbotron {
 	background: white;
-	font-family: "Museo500", Arial;
+	font-family: "Museo700", Arial;
 	color: #226622;
-	padding: 20px;
+	padding-top: 24px;
 }
 
 .jumbotron h1 {
